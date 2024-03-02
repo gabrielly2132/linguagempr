@@ -34,7 +34,7 @@ void q05 () {
 float num1;
 float num2;
 printf ("digite dois numeros reais:");
-scanf ("%f %f", &num1, &num2);
+scanf ("%.2f %.2f", &num1, &num2);
 printf ("os múmeros digitados foram: %f, %f", num1, num2);
 }
 //6. Faça um programa que leia um número inteiro e imprima o seu
@@ -114,11 +114,27 @@ void q12 () {
 }
 //13. Faça um programa que leia o saldo de uma conta poupança e
 //    imprima o novo saldo, considerando um reajuste de 2%.
- void q13 () {
-      float num1, quadrado;
- }
+void q13 () {
+    float saldo, reajuste; 
+    printf ("digite o saldo da sua conta poupança:");
+    scanf ("%f", &saldo);
+    reajuste=saldo*1.02;
+    printf ("o saldo disponível foi: %f.\n o novo saldo é : %f", saldo, reajuste);
+}
+
 //14. Faça um programa que leia a base e a altura de um retângulo
 //    e imprima o perímetro (base + altura) e a área (base * altura).
+void q14 () {
+   float base, alt, per, area;
+   printf ("digite a base do retângulo:");
+   scanf ("%f", &base);
+   printf ("digite a altura do retângulo:");
+   scanf ("%f", &alt);
+   per=base+alt;
+   area=base*alt;
+   printf ("o perímetro é %f.\n a área é %f", per, area);
+
+}
 
 //15. Faça um programa que leia o valor de um produto, o percentual
 //    do desconto desejado e imprima o valor do desconto e o valor
@@ -160,7 +176,7 @@ void q12 () {
 //    necessário também ler o valor da cotação do dólar.
 
 int main () {
-    q12();
+    q14();
 
     return EXIT_SUCCESS;
 }
